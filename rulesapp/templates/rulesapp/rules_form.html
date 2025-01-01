@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firewall Rules Form</title>
+</head>
+<body>
+    <h1>Create Firewall Rules</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="id_action">Action:</label>
+        {{ form.action }}
+        <br><br>
+        <label for="id_source">Source (comma-separated):</label>
+        {{ form.source }}
+        <br><br>
+        <label for="id_destination">Destination (comma-separated):</label>
+        {{ form.destination }}
+        <br><br>
+        <label for="id_port">Port (comma-separated):</label>
+        {{ form.port }}
+        <br><br>
+        <label for="id_protocol">Protocol:</label>
+        {{ form.protocol }}
+        <br><br>
+        <button type="submit">Generate Rule</button>
+    </form>
+</body>
+</html>
+
